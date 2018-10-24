@@ -8,6 +8,6 @@ services:
        - "3000:9080"
     image: dropbox-tags-wlp
     environment:
-       - DBX_ACCESS_TOKEN=
-       - SOLR_URL=
-       - ZIP_MAX_SIZE=
+       - DBX_ACCESS_TOKEN=[enter your dropbox access token here]
+       - SOLR_URL=[enter solr url here]
+       - ZIP_MAX_SIZE=[enter zip max size here]
