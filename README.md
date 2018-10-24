@@ -22,11 +22,13 @@ Following environment variables need to be modified:
 
 
 ### Steps to create docker image using maven build
+
 1. checkout `https://github.com/olgarueckert/dropbox-tags.git`, navigate to the `dropbox-tags/dropbox-tags` maven project and build it using `mvn clean install` command
 2. execute `mvn clean install -P build-docker-image` to build the image
 3. now you can execute `docker run -e "DBX_ACCESS_TOKEN=[]" -e "SOLR_URL=[]" -e "ZIP_MAX_SIZE=[]"  --name dropbox-tags -p 3000:9080 -it openliberty-dropbox-tags:1.0-SNAPSHOT` to start docker container (replace `[]` with your env variables values)
 
 ### Accessing the application
+
 Application is running under the context root `dropbox-tags`. To get the overview or to test the available API please go to `localhost:3000/api/explorer`. Some javadocs regarding REST API can be found here `http://localhost:3000/dropbox-tags/doc/` 
 
 (Please note -  download functionality is currently not working in build-in liberty swagger ui, so to test zip download you will have to call url direclty in browser or use `curl` command, for example: `curl -X GET --header 'Accept: application/octet-stream' 'http://localhost:3000/dropbox-tags/api/files/download?tags=private' --output private.zip`)
