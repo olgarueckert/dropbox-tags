@@ -8,6 +8,6 @@ services:
        - "3000:9080"
     image: dropbox-tags-wlp
     environment:
-       - DBX_ACCESS_TOKEN=7knYXPeePUYAAAAAAACRqXFE_YhXBmjthDblhwO3bEI76d6luHsbBMGdvOpTwNRd
-       - SOLR_URL=http://host.docker.internal:8983/solr/dropbox-tags
-       - ZIP_MAX_SIZE=5
+       - DBX_ACCESS_TOKEN=
+       - SOLR_URL=
+       - ZIP_MAX_SIZE=
