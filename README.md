@@ -22,7 +22,7 @@ Following environment variables need to be modified:
 
 
 ### Steps to create docker image using maven build
-1. checkout `dropbox-tags`, navigate to the `dropbox-tags` maven project and build it using `mvn clean install` command
+1. checkout `https://github.com/olgarueckert/dropbox-tags.git`, navigate to the `dropbox-tags/dropbox-tags` maven project and build it using `mvn clean install` command
 2. execute `mvn clean install -P build-docker-image` to build the image
 3. now you can execute `docker run -e "DBX_ACCESS_TOKEN=[]" -e "SOLR_URL=[]" -e "ZIP_MAX_SIZE=[]"  --name dropbox-tags -p 3000:9080 -it openliberty-dropbox-tags:1.0-SNAPSHOT` to start docker container (replace `[]` with your env variables values)
 
