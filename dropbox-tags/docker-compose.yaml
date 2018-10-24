@@ -1,0 +1,13 @@
+version: '2'
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+       - "3000:9080"
+    image: dropbox-tags-wlp
+    environment:
+       - DBX_ACCESS_TOKEN=7knYXPeePUYAAAAAAACRqXFE_YhXBmjthDblhwO3bEI76d6luHsbBMGdvOpTwNRd
+       - SOLR_URL=http://host.docker.internal:8983/solr/dropbox-tags
+       - ZIP_MAX_SIZE=5
